@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>King County House Price Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="FreshRotten.html" class="title">Prachi Sablani</a>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">King County House Price Prediction</h1>
+							<span class="image fit"><img src="images/House2.jpg"/ width="350" height="500"></span>
+							<p><b>Supervised Machine Leraning | Regression | Predictive Analytics |Python</b><br>
+
+The objective of this project is to predict house prices in the King County, Washington from the transaction details of houses sold previously.<br><br>
+
+
+
+The data has 11000 records with 24 features like number of bathrooms, number of bedrooms, location information, zone code, block group, view type, transaction date, build date, etc.<br><br>
+
+
+
+To approach this project, I followed all the Data Science pipelines right from Exploratory Data Analysis, Feature Engineering, Feature Selection, and Model building and finally prediction of house prices for unseen data.<br><br>
+
+
+
+<b>STEP 1 : Exploratory Data Analysis(EDA)</b><br>
+
+I started the project with Exploratory Data Analysis where I checked data types, missing values, numerical features, distribution of numerical features, categorical features, cardinality of categorical features, outliers, relationship between dependent and independent variable, distribution of independent feature.<br><br>
+
+
+
+<b>STEP 2: Feature Engineering</b><br>
+
+Firstly, I handed missing values where I imputed different values suitable for that particular feature. Then I converted continuous numerical features to log normal form and standardized the data and took values up to 3 std deviation to deal with outliers. I did the one-hot encoding to convert categorical features to numerical form and applied feature scaling. Also, I removed some unnecessary features like the property id which was not adding any useful value to the house price. I also came up with new features, for example I subtracted the year in which the houses were sold to the year they were built and created a new feature. Also, I fetched out the month from transaction dates to check month-wise transactions.<br>
+<br>
+
+
+<b>STEP 3: Feature Selection</b><br>
+
+I applied Pearson’s Correlation matrix and Random Forest for checking the feature importance and selecting useful features. Finally, out of 24 I was left with 7 useful features to predict the house prices.<br><br>
+
+
+
+<b>STEP 4 : Model Building</b><br>
+
+I split this data into training and validation set to track the performance of my model using cross-validation technique.<br>
+
+
+First, I started with linear regression as a baseline model, which gave me a R-squared value of 0.73. Then I moved towards more sophisticated models like random forest and XGBoost. And finally, after 5-fold cross validation I got the best mean R-squared value of 0.83 for house price prediction with XGBoost model. For more details, follow the comments, results and next steps in the House_Price_Prediction.ipynb file.</p>
+							<p>The project files can be found <a href="https://github.com/PrachiSablani/King-County-House-Price-Prediction">here</a>.</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

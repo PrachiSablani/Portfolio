@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fresh or Rotten Classification</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Prachi Sablani</a>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Fresh or Rotten Classification</h1>
+							<span class="image fit"><img src="images/Rottentomato.jpg"/ width="350" height="500"></span>
+							<p><b>Supervised Machine Learning | Text Mining | Classification | Python | Naive Bayes</b><br><br>
+
+
+The objective of this project is to implement <b>Naive Bayes Classifier</b> from scratch in Python to categorize Rotten Tomatoes reviews into rotten and fresh ones and to find the optimal smoothing parameter.<br><br>
+
+
+The data has around 13000 reviews with features like – Movie title, critic name, review, published site, link, review date.<br><br>
+
+
+I started with exploratory data analysis where I checked data types, missing values(23 none, less than 1% of data), numerical features, categorical features, checked the percentage of fresh and rotten (for checking imbalanced classes), duplicate reviews (236), checked missing reviews(0 length or space)<br><br>
+
+
+Then I proceeded with data cleaning, where I removed duplicate reviews and missing values. Then I separated my data into 2 parts – 80% training and 20% test set and converted reviews into bag of words where I extracted all the words from the text and created a vocabulary out of it by creating a vectorizer using Countvectorizer in python.<br><br>
+
+
+After that I calculated the prior probabilities for fresh and rotten reviews. Then I implemented Naïve Bayes classifier from scratch in Python to find the probability of a given review to be classified in fresh as well as rotten and classified into the class which has a higher probability.<br><br>
+
+
+To verify the results, I applied cross-validation and after testing it against test data, I got an accuracy of 70%.<br><br>
+
+
+Lastly, I applied Laplace smoothing and tested the model with different values of smoothing parameter called alpha and cross-validated the model each time.</p>
+							<p>The project files can be found <a href="https://github.com/PrachiSablani/Fresh-or-Rotten-Classification">here</a>.</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
