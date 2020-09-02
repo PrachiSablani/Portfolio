@@ -2701,6 +2701,7 @@ input, select, textarea {
 			justify-content: center;
 			width: 100%;
 			margin-left: 0;
+			font-size: x-small;
 		}
 
 			ul.actions.special li:first-child {
